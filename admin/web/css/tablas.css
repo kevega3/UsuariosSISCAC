@@ -1,0 +1,15 @@
+.Container-Tables{
+    border: solid 2px #c2c2c2;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.tituloConsultas{
+    margin: 8px;
+    padding: 10px 0px 40px 0px;
+    display: inline-flex;
+}
+
+.tituloConsultas h1{
+    padding-left: 17px;
+}

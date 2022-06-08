@@ -1,0 +1,52 @@
+.inputRe{
+    color: white;
+    border: none;
+    background: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: .5s;
+}
+.inputRe:hover{
+    background: rgb(128, 128, 131);
+}
+.menu{
+background: rgb(0,52,103); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(0,52,103,1) 0%, rgba(52,151,218,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,52,103,1) 0%,rgba(52,151,218,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,52,103,1) 0%,rgba(52,151,218,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003467', endColorstr='#3497da',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.inputRe a{
+    color: white;
+    text-decoration: none;
+}
+.tituloNav{
+    padding-left: 10%;
+    color: white;
+    font-weight: bold;
+}
+.contenedorLink{
+    padding: 0;
+    margin: 0;
+}
+.btnCerrar{
+    border: none;
+    background: none;
+}
+.navegar{
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+}
+.navegar a{
+    padding: 13px;
+    color:white;
+    text-decoration: none;
+}
+  .active {
+    background: #c91486;
+  }
+
+

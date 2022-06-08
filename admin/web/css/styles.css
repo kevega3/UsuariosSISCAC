@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+body{
+	padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+    background: rgb(227, 227, 230);
+}
+.VolverJuridica{
+    display: none;
+}
+.VolverAceptados{
+    display: none;
+}
+.VolverRechazados{
+    display: none;
+}
+.btn_buscar{
+    background: #76C35E;
+    border: none;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    color:white;
+    transition: .1s;
+}
+.btn_buscar:hover{
+    background: #457c35;
+}
+/* .FormVolver{
+    display: none;
+}
+
+.VolverAceptados{
+    display: none;
+}
+.FormVolverAceptados{
+    display: none;
+} */
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 100px;
+  }

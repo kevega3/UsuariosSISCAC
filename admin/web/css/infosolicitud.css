@@ -1,0 +1,127 @@
+
+/* @media only screen and (max-width: 600px) and (min-width: 400px)  {
+    .contenedorInfo{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .contenedorInfo{
+        margin: 0px 5% 0px 5%;
+    }
+}
+@media only screen and (max-width: 2000px) and (min-width: 1000px) {
+    .contenedorInfo{
+        margin: 0px 20% 0px 20%;
+    }
+} */
+
+.contenedorArchivos{
+    float: right;
+}
+.fantasma{
+    color: transparent;
+}
+.label_1{
+    border-top: solid 1px #727171;
+    border-bottom: solid 1px #727171;
+    border-left: solid 1px #727171; 
+    padding: 0px 10px 0px 10px;
+    background: #c2c2c2;
+}
+.labelFinal{
+    padding: 0px 10px 0px 10px;
+    border-top: solid 1px #727171;
+    border-bottom: solid 1px #727171;
+    border-right: solid 1px #727171;
+}
+.label{
+    border-top: solid 1px #727171;
+    border-bottom: solid 1px #727171;
+    padding: 10px;
+}
+.label_2{
+    padding: 10px;
+    background: #c2c2c2;
+    border-top: solid 1px #727171;
+    border-bottom: solid 1px #727171;
+    
+}
+table {
+    
+    border-spacing:0px;}
+
+
+.contTable{
+    display: grid;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.tituloConsultas{
+    margin: 8px;
+    padding: 10px 0px 40px 0px;
+    display: inline-flex;
+}
+
+.tituloConsultas h1{
+    padding-left: 17px;
+}
+
+.btn-Descarga{
+    text-decoration: none;
+    color: black;
+    border: solid 2px #c2c2c2;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    transition: .3s;
+}
+.btn-Descarga:hover{
+    background: #d1d1d1;;
+}
+.VolverJuridica{
+    display:block;
+}
+
+
+.Volver{
+    border: none;
+    background: none;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 2px;
+    transition: .2s;
+    color: white;
+    padding: 0px 5px 0px 5px;
+}
+
+.Volver:hover{
+    color: #c9c1c1;
+}
+.btones-Acciones{
+    padding-top: 30px;
+}
+.btnAcciones{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    transition: 0.2s;
+    margin: 0px 10px 0px 10px;
+}
+.aceptar{
+    border-color: green;
+    background: green;
+}
+.aceptar:hover{
+    border-color: rgb(36, 155, 36);
+    background: rgb(36, 155, 36);
+}
+.negar:hover{
+    border-color: rgb(148, 26, 26);
+    background: rgb(148, 26, 26);
+}
+.negar{
+    border-color: red;
+    background: red;
+}

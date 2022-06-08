@@ -1,0 +1,54 @@
+html{
+    box-sizing: border-box;
+    box-sizing: content-box;
+    scrollbar-width: none;
+    position: relative;
+}
+.contenedorImagenes{
+    position: relative;
+    
+}
+/* .imagenes{
+    position: absolute;
+    top: 20%;
+    width:100%;
+    height: 100%;
+} */
+.btnImg{
+    background: blue;
+    padding: 20px;
+}
+.btn{
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    background-position:center;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    transition: .2s;
+    display: flex;
+    position: absolute;
+    
+}
+.btn:hover{
+    box-shadow: inset 0 0 0 4px #08B;
+    width: 425px;
+    height: 225px;
+}
+.btn1{
+    background-image:url('../../img/MicrosoftTeams-image (1).png');
+    
+}
+.btn2{
+    background-image:url('../../img/img1q.png');
+}
+.btn3{
+    background-image:url('../../img/MicrosoftTeams-image (2).png');
+}
+.menuli{
+    padding: 100px;
+}
+
+.menuli li{
+    list-style:none;
+}
