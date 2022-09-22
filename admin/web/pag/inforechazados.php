@@ -56,8 +56,8 @@ font-family: 'Montserrat', sans-serif;">
         }
     ?>
 
-    <section >
-        <?php include('nav.php')?>
+    <section>
+        <?php include('navProvi.php')?>
     </section>
 
 

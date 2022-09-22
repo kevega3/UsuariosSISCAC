@@ -87,6 +87,7 @@ table {
     display: inline-flex;
 }
 
+
 .tituloConsultas h1{
     padding-left: 17px;
 }
@@ -119,7 +120,7 @@ table {
 .btnCrear{
     border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 45px;
     color: white;
     transition: 0.2s;
     margin: 0px 10px 0px 10px;
@@ -129,4 +130,12 @@ table {
 .btnCrear:hover{
     border-color: rgb(36, 155, 36);
     background: rgb(36, 155, 36);
+}
+
+
+.MoverDerechacentrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }

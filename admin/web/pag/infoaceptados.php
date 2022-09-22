@@ -11,10 +11,7 @@ $buscar= base64_decode($_POST['buscar']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aceptado <?php echo $buscar ?></title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--Fuentes-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--Titulo-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,20 +52,39 @@ font-family: 'Montserrat', sans-serif;">
     ?>
 
     <section>
-        <?php include('nav.php')?>
+        <?php include('navProvi.php')?>
     </section>
 
 
+<div class="rowSolicitud">
 
-    <div class="tituloConsultas">
+    <div class="col-6 tituloConsultas ">
         <img src="../../img/simbolo_cac_color.png" alt="" style="width:60px;">
         <h1>Aceptado N°<?php echo $IdSolicitud?></h1>
     </div>
 
+    <!-- <div class="col-5 MoverDerechacentrar">
+        
+            <button aria-current="page" class="btnCrear" name="<?php echo $buscar?>" id="Creado" onclick="Creado()">
+                Creado
+            </button>
+        
+    </div> -->
+</div>
 
 
 
-    <div class="row contenedorInfo">
+
+
+
+
+
+
+
+
+
+
+    <div class=" contenedorInfo">
         <center>
             <section class="col-12">
                 <?php include('plantillas/tablainfo.php')?>
@@ -83,15 +99,15 @@ font-family: 'Montserrat', sans-serif;">
     </script>
     <?php if( $TipoUser == 'CAC'){
                     ?>
-    <div class="row">
-        <section class="col-6 ">
+    <div class="rowSolicitud">
+        <div class="col-6 ">
             <?php	include 'plantillas/archivoscargados.php'; ?>
-        </section>
-        <section class="col-6 ">
+        </div>
+        <div class="col-6 MoverDerechacentrar">
             <button aria-current="page" class="btnCrear" name="<?php echo $buscar?>" id="Creado" onclick="Creado()">
-                Creado
+                ¿ Ya se creo ?
             </button>
-        </section>
+        </div>
     </div>
     <?php }?>
 
@@ -129,9 +145,7 @@ font-family: 'Montserrat', sans-serif;">
     <script src="../js/alert.js"></script>
     <!---->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <!--Fonazome-->
     <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
 

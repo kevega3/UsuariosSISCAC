@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-danger pt-2" data-bs-toggle="modal" data-bs-target="#Correo">
+<button type="button" class="btnAcciones negar" data-bs-toggle="modal" data-bs-target="#Correo">
     Negar
 </button>
 
@@ -42,7 +42,7 @@
                         <input type="hidden" name="correo" value="<?php echo($Correo)?>">
 
                          <input type="submit" class="formulario__btn btonEnviar1" onclick="logHtmlContent()"> 
-            
+                        
                         <button type="button" class="formulario__btn bg-danger " data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </form>
@@ -52,3 +52,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    function Esconder(){
+        $("#Correo").modal("hide");
+    }
+    
+</script>
