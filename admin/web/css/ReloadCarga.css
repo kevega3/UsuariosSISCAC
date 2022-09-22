@@ -1,0 +1,42 @@
+.loader{
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	min-height: 100%;
+	display: none;
+	position: absolute;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index: 99;
+}
+
+.loader.active {
+    display: block;
+}
+.ContenedorEsperar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 57%;
+}
+.Esperar{
+    color: white;
+    font-size: 15px;
+}
+#carga{
+    border: 3px solid #ffffff;
+    border-top-color: #97979700;
+    border-top-style: ridge;
+    height: 50px;
+    width: 50px;
+    border-radius:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    -animation: girar 1.5s linear infinite;
+}

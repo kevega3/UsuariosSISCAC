@@ -43,39 +43,39 @@ font-family: 'Montserrat', sans-serif;">
     </section>
 
     <section>
-        <div class="contenedorImagenes">
+        <div class="container-fluid contenedorImagenes">
             <div class="row">
                 <div class="col-sm-12 col-md-6 ">
                     <center>
-                    <ul class="menuli">
-                    <li>
-                    <?php if($TipoUser == 'Juridica'){
+                        <ul class="menuli">
+                            <li>
+                                <?php if($TipoUser == 'Juridica'){
                         ?>
-            
-                        <a href="juridica.php" class="btn btn1"></a>
-                        <?php }else{ ?>
 
-                            <a href="creados.php" class="btn btn3"></a>
-                        <?php } ?>
-                        
-                       
-                    </li>
-                </ul>
+                                <a href="juridica.php" class="btn btn1"></a>
+                                <?php }else{ ?>
+
+                                <a href="creados.php" class="btn btn3"></a>
+                                <?php } ?>
+
+
+                            </li>
+                        </ul>
                     </center>
                 </div>
 
 
                 <div class="col-sm-12 col-md-6 ">
                     <center>
-                    <ul class="menuli">
-                    <li>
-                        <a href="aceptados.php" class="btn btn2"></a>
-                    </li>
-                </ul>
+                        <ul class="menuli">
+                            <li>
+                                <a href="aceptados.php" class="btn btn2"></a>
+                            </li>
+                        </ul>
                     </center>
                 </div>
-                
-                
+
+
             </div>
 
 

@@ -21,7 +21,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <form action="../../modelo/AgregarToken.php" method="post" class="formulario" id="formulario"> 
+                <form   class="formulario" id="formulario"> 
 				
 				<!-- Grupo: NombreEntidad -->
 				<div class="formulario__grupo" id="grupo__NombreEntidad">
@@ -77,7 +77,7 @@
 
 				
 				
-				<button type="submit" class="formulario__btn" onclick="CrearToken()" >Crear</button>
+				<button type="submit" class="formulario__btn"  >Crear</button>
 
 			</form>
                 </div>
@@ -86,8 +86,6 @@
                     <!-- <button type="button" class="btn btn-primary">Guardad Cambios</button> -->
 
                     <div class="formulario__grupo formulario__grupo-btn-enviar">
-					<input type="hidden" name="entrar" id="entrar" /> 
-					
 				</div>
                 </div>
             </div>
@@ -137,13 +135,17 @@
 
     <div class="BordeTabla">
         <table id="Tablas" class="table table-striped" style="width:100%">
-            <thead class="sticky-md-top ">
-                <tr class="tablaCol">
+            <thead class="">
+                <tr class="tablaCol bg-primary text-white">
                     <th>Nombre</th>
                     <th>Token</th>
                     <th>Entidad</th>
                     <th>Correo</th>
-                    <th>Reenviar</th>
+                    <th>
+                        <center>
+                         Reenviar
+                         </center>
+                    </th>
 
                 </tr>
             </thead>
@@ -151,7 +153,7 @@
 
                 <?php
                     
-                    $query ="SELECT * FROM token_au";
+                    $query ="SELECT * FROM token_au"  ;
                     $res = mysqli_query($conn, $query);
                     while ($row = mysqli_fetch_array($res)) { ?>
                 <tr class="columnas">
@@ -161,17 +163,12 @@
                     <td><?php echo $row['Token']; ?></td>
                     <td><?php echo $row['NombreEntidad']; ?></td>
                     <td><?php echo $row['CorreoNotificador']; ?></td>
-                    
                     <td>
-                        <form action="infoaceptados.php" method="POST">
-                            <input name="CorreoNotificador" type="hidden" value="<?php echo base64_encode($row['CorreoNotificador']) ?>">
-                          
-                            <center>
-                                <button type="submit" class="btn_buscar">
+                    <center> 
+                                <button  class="btn_buscar" onclick="ReenviarCodigo('<?php echo $row['CorreoNotificador']?>','<?php echo $row['IdToken']; ?>')">
                                 <i class="fas fa-reply"></i>
                                 </button>
-                            </center>
-                        </form>
+                    </center>
                     </td>
                     <?php }
                     ?>
@@ -181,9 +178,6 @@
     </div>
 
 </div>
-
-
-
-
 <!-- Tabla -->
 </div>
+

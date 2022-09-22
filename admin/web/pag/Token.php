@@ -10,7 +10,7 @@ include '../../modelo/autenticaruser.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitudes Usuarios</title>
+    <title>Generar Token</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -28,15 +28,28 @@ include '../../modelo/autenticaruser.php';
     <link rel="stylesheet" href="../../web/css/tablas.css">
     <link rel="stylesheet" href="../../web/css/styles.css">
     <link rel="stylesheet" href="../../web/css/login.css">
+    <link rel="stylesheet" href="../../web/css/ReloadCarga.css">
+    
     
 </head>
 
 <body style="
 font-family: 'Montserrat', sans-serif;">
     </style>
-    <div class="" id="contenedor_carga">
-        <div id="carga"></div>
+
+
+    <div class="loader ">
+        <div class="ContenedorEsperar">
+            <center>
+                <p class="Esperar">Espera un momento porfavor ...</p>
+            </center>
+        </div>
+        <div id="carga">
+        </div>
     </div>
+
+
+    
     
     
     <section>
@@ -56,23 +69,6 @@ font-family: 'Montserrat', sans-serif;">
     </footer>
 
 
-
-
-
-
-
-
-
-
-
-    <!-- JS -->
-    <script>
-    window.onload = function() {
-        var contenedor = document.getElementById('contenedor_carga');
-        contenedor.style.visibility = 'hidden';
-        contenedor.style.opacity = '0';
-    }
-    </script>
 
     <!--Alertas -->
 
