@@ -203,7 +203,9 @@ blockquote {
 
 b,
 strong {
-    font-weight: bolder
+    font-weight: bolder;
+    color: #001D8A;
+    
 }
 
 .small,

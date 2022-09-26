@@ -38,6 +38,7 @@
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;">
     </style>
+    
 <div class="" id="contenedor_carga">
         <div id="carga"></div>
 </div>

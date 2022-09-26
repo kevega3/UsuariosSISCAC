@@ -4,8 +4,7 @@ const inputs = document.querySelectorAll("#formulario input");
 const expresiones = {
 	NombreEntidad: /^[a-z,A-Z, 0-9 o _ * % ñ $ # / () & = !]{5,20}$/, // 7 a 14 numeros.
 	// nombre: /^[a-zA-ZÀ-ÿ\s],[0-9]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	NombreNotificador: /^[a-z,A-Z, 0-9 o _ * ñ % $ # / () & = !]{5,20}$/, // 7 a 14 numeros.
-	CorreoNotificador: /^[a-zA-Z0-9 ñ _]+@[a-zA-Z0-9-.]{5,40}$/,
+
 };
 
 const campos = {
