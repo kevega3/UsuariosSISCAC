@@ -56,7 +56,6 @@ include ('AutenticarEnti.php');
     }
 
     footer {
-
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#001e36+0,001d44+100 */
         background: rgb(0, 30, 54);
         /* Old browsers */
@@ -71,6 +70,10 @@ include ('AutenticarEnti.php');
         height: 60px;
 
     }
+    .select:focus,input:focus,input[type=file]{
+  outline: none;
+  border: 2px solid #17309C;
+}
     </style>
 </head>
 
@@ -122,36 +125,19 @@ background-color: rgb(227, 227, 230); ">
                 <!--  -->
                 <div class=" container container2">
                     <div class="Pasos">
-                        <h2 class="TituloParaReg">Para registrarse en SISCAC debe seguir los siguientes pasos:</h3>
+                    <h2 class="TituloParaReg">Para generar una solicitud de usuarios SISCAC debe seguir los siguientes pasos:</h4>
                             <h4>Paso 1 descargue Los documentos :</h4>
                             <p>En este paso debe descargar y diligenciar los documentos que encuentra en la parte
                                 inferior.</p>
                     </div>
-                    <div class="Pasos">
-
-                        <h4>Paso 2 llenar el formulario :</h4>
-                        <p>Diligencie el formulario que se encuentra a continuación y adjunte allí los documentos del
-                            paso 1
-                            debidamente diligenciados.</li>
-                        </p>
-
-                    </div>
-                    <div class="Pasos">
-                        <h4>Paso 3 Espera nuestra respuesta :</h4>
-                        <p>Nosotros revisaremos su solicitud y le enviaremos un correo electronico notificando nuestra
-                            respuesta </p>
-                    </div>
-
-
 
                     <h3 class="TituloParaReg">Archivos Necesarios para su solicitud</h3>
                     <table>
                         <tbody>
                             <tr>
                                 <td>Formato de asignación de usuarios</td>
-                                <td><a
-                                        href="https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx"><button
-                                            class="btn-Descarga"> <i class="fas fa-download"></i></button></a>
+                                <td>
+                                    <button class="btn-Descarga" onclick="FormatoAsig()"> <i class="fas fa-download"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -181,6 +167,24 @@ background-color: rgb(227, 227, 230); ">
                         </tbody>
                     </table>
 
+                    <div class="Pasos">
+
+                        <h4>Paso 2 llenar el formulario :</h4>
+                        <p>Diligencie el formulario que se encuentra a continuación y adjunte allí los documentos del
+                            paso 1
+                            debidamente diligenciados.</li>
+                        </p>
+
+                    </div>
+                    <div class="Pasos">
+                        <h4>Paso 3 Espera nuestra respuesta :</h4>
+                        <p>Nosotros revisaremos su solicitud y le enviaremos un correo electronico notificando nuestra
+                            respuesta.</p>
+                    </div>
+
+
+
+                    
 
                 </div>
 
@@ -197,7 +201,7 @@ background-color: rgb(227, 227, 230); ">
                                     title="Seleccione si su entidad es EAPB o IPS"
                                     data-content="Some content inside the popover" class="Comentario">?</a>
 
-                                <select name="tipoEntidad" id="tipoEntidad" required>
+                                <select class="select" name="tipoEntidad" id="tipoEntidad" required>
                                     <option disabled selected value="">Seleccionar</option>
 
 
@@ -327,10 +331,6 @@ background-color: rgb(227, 227, 230); ">
                             <button type="submit" class="BtnSubmmit">
                                 Siguiente Paso <i class="button__icon fas fa-arrow-right"></i>
                             </button>
-
-
-
-                            <!-- <input type="submit" value="Siguiente Paso"> -->
                         </div>
                     </form>
                 </div>
@@ -402,6 +402,7 @@ background-color: rgb(227, 227, 230); ">
     });
     </script>
     <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../js/functions.js"></script>
     <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
 </body>

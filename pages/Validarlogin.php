@@ -13,10 +13,6 @@ if ($_POST['entrar']) {
 
     if($response['success'] && ($response['score'] && $response['score'] > 0.5)){ 
 		
-   
-
-
-
     $codigo = trim($_REQUEST['TokenACC']);
     $codigo = filter_var($codigo, FILTER_SANITIZE_STRING);
 
@@ -44,7 +40,6 @@ else{
         $_SESSION['id'] = $id;
         $_SESSION['entidad'] ='entidadConToken';
         header("location: GenerarSolicitud.php");
-           
 }
 
 }else{

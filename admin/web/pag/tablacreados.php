@@ -7,8 +7,10 @@
         <table id="Tablas" class="table table-striped" style="width:100%">
             <thead class="sticky-md-top ">
                 <tr class="tablaCol">
+                    <th>N°</th>
                     <th>Nombre</th>
                     <th>RepresentanteLegal</th>
+                    <th>NIT</th>
                     <th>Entidad</th>
                     <th>Observar</th>
 
@@ -23,9 +25,10 @@
                     while ($row = mysqli_fetch_array($res)) { ?>
                 <tr class="columnas">
 
-
+                    <td><?php echo $row['IdSolicitud']; ?></td>
                     <td><?php echo $row['Nombre']; ?></td>
                     <td><?php echo $row['RepresentanteLegal']; ?></td>
+                    <td><?php echo $row['NIT']."-".$row['NumVNIT'] ?></td>
                     <td><?php echo $row['DescripcionEntidad']; ?></td>
                     <td>
                         <form action="infocreados.php" method="POST">

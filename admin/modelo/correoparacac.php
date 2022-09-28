@@ -1,6 +1,6 @@
 <?php 
 
-$BucarCorreoCAC = "SELECT * FROM `usuarios` WHERE IdUsuario = '21' ";
+$BucarCorreoCAC = "SELECT * FROM `usuarios` WHERE IdUsuario = '21'";
 
 $res= mysqli_query($conn,$BucarCorreoCAC);
 
@@ -11,13 +11,10 @@ while ($fila= mysqli_fetch_array($res)) {
 
 $mensaje2 = "prueba";
 $destinatario2 = $correoCAC;
-// $destinatario = 'kvega@cuentadealtocosto.org';
 
-//$destinatario2 = "medioscac@cuentadealtocosto.org";
-// Datos de la cuenta de correo utilizada para enviar v�a SMTP
-$smtpHost = "smtp.office365.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "info@cuentadealtocosto.org";  // Mi cuenta de correo
-$smtpClave = "jcvxrwvsldpmczhd";  // Mi contrase�a
+$smtpHost = "smtp.office365.com";  
+$smtpUsuario = "info@cuentadealtocosto.org";  
+$smtpClave = "jcvxrwvsldpmczhd";  
 
 $mail2 = new PHPMailer();
 $mail2->IsSMTP();
@@ -27,22 +24,17 @@ $mail2->IsHTML(true);
 $mail2->CharSet = "utf-8";
 
 
-// VALORES A MODIFICAR //
+
 $mail2->Host = $smtpHost; 
 $mail2->Username = $smtpUsuario; 
 $mail2->Password = $smtpClave;
 
-//$path = 'upload/'.$_FILES["archivo"]["name"];
-//move_uploaded_file($_FILES["archivo"]["tmp_name"],$path);
-
-
 $mail2->From = "info@cuentadealtocosto.org"; 
 $mail2->FromName = "Cuenta de Alto Costo";
-$mail2->AddAddress($destinatario2); // Esta es la direcci�n a donde enviamos los datos del formulario
-//$mail->AddAttachment($path); 
-//$mail->AddAddress($destinatario2);
+$mail2->AddAddress($destinatario2); 
 
-$mail2->Subject = "Usuarios SISCAC"; // Este es el titulo del email.
+
+$mail2->Subject = "Usuarios SISCAC"; 
 $mensajeHtml = nl2br($mensaje2);
 $mail2->Body = "
 <!DOCTYPE html>
@@ -158,7 +150,7 @@ $mail2->Body = "
         <br>
         
         <div class='texto'>
-          <p>Tienes una nueva solicitud de usuario SISCAC pendiente mira la solicitud aquí.</p> 
+          <p>Tiene una nueva solicitud de usuario SISCAC aceptada por la area de juridica mire la solicitud aquí.</p> 
         </div>
       </br>
       </br>
@@ -176,9 +168,9 @@ $mail2->Body = "
     </div>
   </div>
 </body>
-</html>"; // Texto del email en formato HTML
-$mail2->AltBody = "{$mensaje2} \n\n "; // Texto sin formato HTML
-// FIN - VALORES A MODIFICAR //
+</html>"; 
+$mail2->AltBody = "{$mensaje2} \n\n "; 
+
 
 $mail2->SMTPOptions = array(
     'ssl' => array(
@@ -190,11 +182,10 @@ $mail2->SMTPOptions = array(
 $estadoEnvio2 = $mail2->Send(); 
 if($estadoEnvio2){
     echo "<>alert('Se acepto la solicitud exitosamente')</script>";
-    echo "<script>window.location.replace('../web/pag/juridica.php?buscar='+ Editar)</script>";
+    echo "<script>window.location.replace('../web/pag/juridica.php)</script>";
 } else {
     echo "<script>alert('Ocurrio un Error inesperado Vuelva a intentarlo ..')</script>"; 
-    echo "<script>window.location.replace('../web/pag/juridica.php?buscar='+ Editar)</script>";
+    echo "<script>window.location.replace('../web/pag/juridica.php)</script>";
 }
 
-echo "<script>alert('entro aqui')</script>";
 ?>

@@ -11,7 +11,6 @@ include ('pages/key.php');
 <link rel="stylesheet" type="text/css" href="css/reload.css">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/login.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
 <!-- boostrap  -->
 <link rel="stylesheet" href="admin/web/css/bootstrap.min.css">
 <!--  -->
@@ -38,7 +37,7 @@ label {
 font-family: 'Montserrat', sans-serif;
 background-color: rgb(227, 227, 230); ">
 
-
+<div class="container-fluid">
     <div class="w3-row ">
         <div class="w3-container w3-half ">
             <!--  -->
@@ -47,139 +46,87 @@ background-color: rgb(227, 227, 230); ">
                     <h2 class="TituloParaReg">Para registrarse en SISCAC debe seguir los siguientes pasos:</h3>
                         <h4>Paso 1 Solicite su codigo de acceso:</h4>
                         <p>En este paso debe enviar un correo electronico a
-                            <strong>siscac@cuentadealtocosto.org</strong> solicitando un codigo de generacion de
-                            solicitud.
+                            <strong>siscac@cuentadealtocosto.org</strong> solicitando un código de generación de
+                            solicitud;Anexé Nombre de la entidad,nombre del notificador y correo institucional del notificador. 
                         </p>
                 </div>
-                <!-- <div class="Pasos">
-                    <h4>Paso 2 Ingreso a nuestro portal:</h4>
-                    <p>Con el codigo de acceso debe iniciar sesion en nuestro portal para comenzar a diligenciar los documentos necesarios para la creacion de los usuarios SISCAC.</li>
-                    </p>
-                </div> -->
                 <div class="Pasos">
-                    <h4>Paso 2 descargue Los documentos :</h4>
-                    <p>En este paso debe descargar y diligenciar los documentos que encuentra en la parte
-                        inferior.</p>
-                </div>
-                <h3 class="TituloParaReg">Archivos Necesarios para su solicitud</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Formato de asignación de usuarios</td>
-                            <td><a
-                                    href="https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx"><button
-                                        class="btn-Descarga">Descargar</button></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Modelo de Comunicado solicitud de usuarios</td>
-                            <td><a
-                                    href="https://cuentadealtocosto.org/site/wp-content/uploads/2020/02/modelo_comunicado_solicitud_usuariossiscac.docx"><button
-                                        class="btn-Descarga">Descargar</button></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Formato de Tratamiento de datos personales <strong>Representante legal</strong></td>
-                            <td>
-                                <div class="contenedorBtonDescarga">
-                                    <a
-                                        href="https://cuentadealtocosto.org/site/sgi_dg_26_autorizacion-para-tratamiento-de-datos-personales-representante-legal-siscac-v2-2/"><button
-                                            class="btn-Descarga">Descargar</button></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Formato de Tratamiento de datos personales <strong>Funcionarios</strong></td>
-                            <td><a
-                                    href="https://cuentadealtocosto.org/site/sgi_dg_28_autorizacion-para-tratamiento-de-datos-personales-funcionarios-siscac-v2-2/"><button
-                                        class="btn-Descarga">Descargar</button></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="Pasos">
-                    <h4>Paso 4 Ingreso a nuestro portal :</h4>
-                    <p>Dentro del portal debe de diligenciar el formulario y adjunte allí los documentos del paso 2
-                        debidamente diligenciados.</li>
-                    </p>
+                    <h4>Paso 2 Ingrese al portal:</h4>
+                    <p>En este paso debe ingresar el código de acceso suministrado por nosotros solicitado en el paso
+                        anterior.</p>
                 </div>
 
                 <div class="Pasos">
-                    <h4>Paso 4 Espera nuestra respuesta :</h4>
-                    <p>Nosotros revisaremos su solicitud y le enviaremos un correo electronico notificando nuestra
-                        respuesta.</p>
+                    <h4>Paso 3 Sigue los demás pasos:</h4>
+                    <p>En este paso debe de seguir y anexar los documentos necesarios dentro del portal.</p>
                 </div>
 
 
 
-
-
-
-            </div>
-
-            <!--  -->
         </div>
 
-        <div class="w3-container w3-half ">
-            <!--  -->
-            <div class="containerLogin">
-                <div class="screen">
-                    <div class="screen__content">
+        <!--  -->
+    </div>
 
-                        <form class="login" action="pages/Validarlogin.php" method="POST" id="formulario">
+    <div class="w3-container w3-half ">
+        <!--  -->
+        <div class="containerLogin">
+            <div class="screen">
+                <div class="screen__content">
 
-                            <h2 class="TituloLogin">Unete e Interaopera</h2>
+                    <form class="login" action="pages/Validarlogin.php" method="POST" id="formulario">
+
+                        <h2 class="TituloLogin">Unete e Interopera</h2>
 
 
-                           
 
-                            <div class="formulario__grupo" id="grupo__TokenACC">
-                                
-                                <div class="formulario__grupo-input">
-                                    <div class="login__field">
-                                        <span class="formulario__validacion-estadospan fas fa-lock"></span>
-                                        <input type="password" class="login__input" placeholder="Clave de acceso"
-                                            name="TokenACC" id="TokenACC">
-                                    </div>
 
-                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        <div class="formulario__grupo" id="grupo__TokenACC">
+
+                            <div class="formulario__grupo-input">
+                                <div class="login__field">
+                                    <span class="formulario__validacion-estadospan fas fa-lock"></span>
+                                    <input type="password" class="login__input" placeholder="Clave de acceso"
+                                        name="TokenACC" id="TokenACC">
                                 </div>
-                                <p class="formulario__input-error">
-                                    El Usuario debe tener 5 a 16 dígitos y solo puede contener numeros.
-                                </p>
+
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-
-
-                            <button class="button login__submit" type="submit">
-                                <span class="button__text" id="btnSubmitt" >Genera una solicitud</span>
-                                <i class="button__icon fas fa-chevron-right"></i>
-                                <input type="hidden" id="entrar" name="entrar" >
-                            </button> 
-
-                        </form>
-                        <div class="social-login">
-                            <img src="admin/img/simbolo_cac_blanco.png" alt="" width="70%">
+                            <p class="formulario__input-error">
+                                El Usuario debe tener 5 a 16 dígitos y solo puede contener numeros.
+                            </p>
                         </div>
-                    </div>
-                    <div class="screen__background">
-                        <span class="screen__background__shape screen__background__shape4"></span>
-                        <span class="screen__background__shape screen__background__shape3"></span>
-                        <span class="screen__background__shape screen__background__shape2"></span>
-                        <span class="screen__background__shape screen__background__shape1"></span>
+
+
+                        <button class="button login__submit" type="submit">
+                            <span class="button__text" id="btnSubmitt">Genera una solicitud</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                            <input type="hidden" id="entrar" name="entrar">
+                        </button>
+
+                    </form>
+                    <div class="social-login">
+                        <img src="admin/img/simbolo_cac_blanco.png" alt="" width="70%">
                     </div>
                 </div>
+                <div class="screen__background">
+                    <span class="screen__background__shape screen__background__shape4"></span>
+                    <span class="screen__background__shape screen__background__shape3"></span>
+                    <span class="screen__background__shape screen__background__shape2"></span>
+                    <span class="screen__background__shape screen__background__shape1"></span>
+                </div>
             </div>
-
-            <!--  -->
         </div>
 
+        <!--  -->
+    </div>
+
+</div>
 
 
 
-
-        <script type="text/Javascript">
-    grecaptcha.ready(function(){
+    <script type="text/Javascript">
+        grecaptcha.ready(function(){
 
     grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token) {
         document.getElementById("entrar").value = token;
@@ -188,27 +135,30 @@ background-color: rgb(227, 227, 230); ">
     </script>
 
     <script>
-        function getReCaptcha() {
-		grecaptcha.ready(function(){
-				grecaptcha.execute('<?php echo SITE_KEY;?>', {action: 'homepage'}).then(function(token) {
-					document.getElementById("entrar").value = token;
-				});
-			});
-	}
+    function getReCaptcha() {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('<?php echo SITE_KEY;?>', {
+                action: 'homepage'
+            }).then(function(token) {
+                document.getElementById("entrar").value = token;
+            });
+        });
+    }
 
-	getReCaptcha();
-	setInterval(function(){getReCaptcha();},110000);
+    getReCaptcha();
+    setInterval(function() {
+        getReCaptcha();
+    }, 110000);
     </script>
 
-        <script src="js/login.js"></script>
+    <script src="js/login.js"></script>
 
-        <!-- boostrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-        <!--  -->
-        <script type="text/javascript" src="js/functions.js"></script>
-        <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -337,7 +337,7 @@ else{
 
 	echo "<script>alert('Se ha Actualizado la informacion correctamente')</script>";
 	//session_destroy();
-	// echo "<script>window.location.replace('../form.php')</script>";
+	echo "<script>window.location.replace('../form.php')</script>";
 
 }
 else{

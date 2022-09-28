@@ -1,30 +1,21 @@
 
-
-/* * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;	
-	font-family: Raleway, sans-serif;
-} */
-
-/* body {
-	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
-} */
-
 .containerLogin {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 120vh;
 }
-
+.ContainerPas{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
 
 .screen {		
     background: linear-gradient(90deg, #001D8A, #15004E);
     position: relative;
     height: 600px;
     width: 360px;
-    box-shadow: 0px 0px 15px #000000;
+    box-shadow: 0px 0px 25px #000000;
     border-radius: 20px;
 }
 
@@ -52,19 +43,19 @@
 
 .screen__background__shape1 {
 	height: 520px;
-	width: 520px;
-	background: #FFF;	
-	top: -50px;
-	right: 120px;	
-	border-radius: 0 72px 0 0;
+    width: 520px;
+    background: #FFF;
+    top: -25px;
+    right: 120px;
+    border-radius: 0 72px 0 0;
 }
 
 .screen__background__shape2 {
-    height: 220px;
+	height: 220px;
     width: 220px;
     background: linear-gradient(270deg, #1739cc , #0081D0);
     top: -172px;
-    right: 0;
+    right: 5px;
     border-radius: 32px;
 }
 
@@ -72,18 +63,18 @@
 	height: 540px;
     width: 190px;
     background: linear-gradient(270deg, #0082CA,#173999);
-    top: -24px;
+    top: -17px;
     right: 0;
     border-radius: 32px;
 }
 
 .screen__background__shape4 {
 	height: 400px;
-	width: 200px;
-	background: #0180C8;	
-	top: 420px;
-	right: 50px;	
-	border-radius: 60px;
+    width: 200px;
+    background: #0180C8;
+    top: 420px;
+    right: 37px;
+    border-radius: 60px;
 }
 
 .login {
@@ -117,7 +108,7 @@
     font-weight: 700;
     width: 85%;
     transition: .2s;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .login__input:active,
@@ -209,28 +200,7 @@ strong{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Formulariobonito */
-
-
-
 .formulario__grupo-input {
 	margin-top: 30px;
 	position: relative;
@@ -348,7 +318,7 @@ strong{
 
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
+	color: #17309C;
 	opacity: 1;
 }
 
@@ -363,11 +333,7 @@ strong{
 
 .formulario__grupo-incorrecto .formulario__input {
 	border: 3px solid red;
-	
 }
-
-
-
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
 	.formulario {

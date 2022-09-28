@@ -187,3 +187,52 @@ function validarTamano(){
       $("#file4").text(fileName);
     });
     });
+
+
+   function FormatoAsig(){
+    Swal.fire({
+      title: 'Eligue su tipo de entidad',
+      input: 'select',
+      confirmButtonColor: '#17309C',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Descargar',
+      inputOptions: {
+        '1': 'IPS',
+        '2': 'EPS',
+      },
+      inputPlaceholder: 'Requerido',
+      showCancelButton: true,
+      inputValidator: function (value) {
+        return new Promise(function (resolve, reject) {
+          if (value !== '') {
+            resolve();
+          } else {
+            resolve('Necesitamos que elija una opcion ');
+          }
+        });
+      }
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        if(result.value == '1'){
+          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx";
+          target = "_blank";
+        }else if(result.value == '2'){
+          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx";
+          target = "_blank";
+        }else{
+          Swal.fire({
+            icon: 'error',
+            html: 'Vuelva a descargarlo'
+          });  
+        }
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Documento descargado',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+
+    });
+    }

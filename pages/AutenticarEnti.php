@@ -1,4 +1,3 @@
-
 <?php
 
 include('../admin/modelo/conn.php');
@@ -6,7 +5,7 @@ session_start();
 if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
     echo "<script>alert('No has iniciado sesion, porfavor logearse')</script>";
     session_destroy();
-    echo "<script>window.location.replace('../../form.php')</script>";
+    echo "<script>window.location.replace('../index.php')</script>";
     exit;
 }else{
     $varsesion = $_SESSION['entidad'];
