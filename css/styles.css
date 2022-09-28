@@ -192,7 +192,7 @@ td{
     -webkit-transform: translateZ(0); backface-visibility: hidden;
   /* scale(1.0, 1.0); */
     transform: translateZ(0);
-  background:#02103d url('../img/FondoHeader.jpg') 50% 0 no-repeat;
+  background:#02103d url('../img/FondoHeader.jpg') 50% 0 content-box;
   background-size:100%;
   background-attachment:fixed;
   animation: grow 360s  linear 10ms infinite;
@@ -202,7 +202,6 @@ td{
 .header a{
 	color: #eee;
     font-size: 20px;
-
 }
 .menu{
   display:block;
