@@ -9,7 +9,7 @@ $buscar= trim($_POST['buscar']);
 
 $correo= trim($_POST['correo']);
 $AsgU= trim($_POST['AsgU']);
-   $SoliU= trim($_POST['SoliU']);
+  $SoliU= trim($_POST['SoliU']);
    $Rel= trim($_POST['Rel']);
    $DaFun= trim($_POST['DaFun']);
    $Fecha = date('Y-m-d', time());
@@ -62,7 +62,6 @@ if(empty($AsgU)){
 
 ?>
   <script>
-
 var buscar = "<?php echo $buscar;?>";
 const Editar = window.btoa(buscar);
   </script>

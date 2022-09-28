@@ -35,8 +35,8 @@ label {
 </head>
 
 <body style="
-font-family: 'Montserrat', sans-serif;">
-    </style>
+font-family: 'Montserrat', sans-serif;
+background-color: rgb(227, 227, 230); ">
 
 
     <div class="w3-row ">

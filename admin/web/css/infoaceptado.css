@@ -52,15 +52,17 @@ table {
     
     .btn-Descarga{
         text-decoration: none;
-        color: black;
-        border: solid 2px #c2c2c2;
+        color: white;
+        font-size: 20px;
+        border: solid 2px #17309C;
         border-radius: 8px;
         padding: 10px;
+        background: #17309C;
         margin: 5px;
         transition: .3s;
     }
     .btn-Descarga:hover{
-        background: #d1d1d1;;
+        background: #071657;;
     }
 
 

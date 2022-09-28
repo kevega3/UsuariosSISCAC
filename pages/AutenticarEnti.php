@@ -1,4 +1,7 @@
+
 <?php
+
+include('../admin/modelo/conn.php');
 session_start();
 if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
     echo "<script>alert('No has iniciado sesion, porfavor logearse')</script>";
@@ -9,13 +12,13 @@ if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
     $varsesion = $_SESSION['entidad'];
     $buscar = $_SESSION['id'];
 
-    $varQuery ="SELECT * FROM solicitudes WHERE IdSolicitud = '$buscar'";
+    $varQuery ="SELECT * FROM `token_au` WHERE IdToken = '$buscar'";
     $res =  mysqli_query($conn,$varQuery);
     if($varsesion == null || $varsesion = '' ||  mysqli_num_rows($res)==0)
         {
         echo "<script>alert('Debe Digitar el codigo asignado para poder acceder')</script>";
         session_destroy();
-        echo "<script>window.location.replace('../../form.php')</script>";
+        echo "<script>window.location.replace('../index.php')</script>";
         exit;
     }else{
         $varQuery2 = "SELECT s.IdSolicitud,s.IdAsignadoA,s.CodigoRem, a.IdArchivo, a.Nombre, a.Ruta,a.Estado,c.Comentario,c.IdSolicitud FROM solicitudes s INNER JOIN comentarios c ON s.IdSolicitud=c.IdSolicitud INNER JOIN archivos a ON s.IdSolicitud= a.IdSolicitud WHERE s.IdSolicitud = '$buscar'";
@@ -24,15 +27,6 @@ if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
             $Estado[]=$fila2['Estado'];
             $Comentario=$fila2['Comentario'];
             $IdArchivo[]=$fila2['IdArchivo'];
-        }
-        
-        for($i=1;$i<=4;$i++){
-        $BuscarArchivo ="SELECT * FROM archivos WHERE IdSolicitud=$buscar AND TipoDoc = $i";
-        $res3 = mysqli_query($conn, $BuscarArchivo);
-        while ($row2 = mysqli_fetch_array($res3)) { 
-            $Nombre[]=$row2['Nombre'];
-        }
-        
         }
     
     $inactividad = 600;
@@ -43,7 +37,7 @@ if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
             
             echo "<script>alert('Debes volverte a loguear')</script>";
             session_destroy();
-            echo "<script>window.location.replace('../../form.php')</script>";
+            echo "<script>window.location.replace('../index.php')</script>";
             die();
         }
     }

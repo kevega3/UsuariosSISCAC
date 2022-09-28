@@ -1,3 +1,16 @@
+<?php 
+
+
+$query2 ="SELECT * FROM archivos WHERE IdSolicitud = '$buscar'" ;
+
+$res2 = mysqli_query($conn, $query2);
+while ($row2 = mysqli_fetch_array($res2)) { 
+    // $Ruta[]=$row2['Ruta'];
+    $IdArchivo[]=$row2['IdArchivo'];
+}
+
+?>
+
 <button type="button" class="btnAcciones negar" data-bs-toggle="modal" data-bs-target="#Correo">
     Negar
 </button>
@@ -24,16 +37,16 @@
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
 
-
+                    
                     <div class="checkbox">
                         <h3 class="titulomodal">Archivos Incorrectos</h3>
-                        <input type="checkbox" value="<?php echo $IdArchivo[1] ?>" name="AsgU"> Asignacion Usuarios
+                        <input type="checkbox" value="<?php echo $IdArchivo[1]; ?>" name="AsgU"> Asignacion Usuarios
                         <br>
-                        <input type="checkbox" value="<?php echo $IdArchivo[3] ?>" name="SoliU"> Solicitud Usuarios
+                        <input type="checkbox" value="<?php echo $IdArchivo[3]; ?>" name="SoliU"> Solicitud Usuarios
                         <br>
-                        <input type="checkbox" value="<?php echo $IdArchivo[2] ?>" name="Rel"> Representantes Legales
+                        <input type="checkbox" value="<?php echo $IdArchivo[2]; ?>" name="Rel"> Representantes Legales
                         <br>
-                        <input type="checkbox" value="<?php echo $IdArchivo[0] ?>" name="DaFun"> Datos Funcionarios
+                        <input type="checkbox" value="<?php echo $IdArchivo[0]; ?>" name="DaFun"> Datos Funcionarios
                     </div>
                     <div class="modal-footer ">
                         

@@ -16,10 +16,10 @@ if(mysqli_num_rows($res)==0){
 	}
 	$mensaje = "prueba";
 $destinatario = $Correo;
-// Datos de la cuenta de correo utilizada para enviar v�a SMTP
-$smtpHost = "smtp.office365.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "info@cuentadealtocosto.org";  // Mi cuenta de correo
-$smtpClave = "jcvxrwvsldpmczhd";  // Mi contrase�a
+
+$smtpHost = "smtp.office365.com";  
+$smtpUsuario = "info@cuentadealtocosto.org"; 
+$smtpClave = "jcvxrwvsldpmczhd";  
 
 $mail = new PHPMailer();
 $mail->IsSMTP();
@@ -29,22 +29,17 @@ $mail->IsHTML(true);
 $mail->CharSet = "utf-8";
 
 
-// VALORES A MODIFICAR //
+
 $mail->Host = $smtpHost; 
 $mail->Username = $smtpUsuario; 
 $mail->Password = $smtpClave;
 
-//$path = 'upload/'.$_FILES["archivo"]["name"];
-//move_uploaded_file($_FILES["archivo"]["tmp_name"],$path);
 
-
-$mail->From = "info@cuentadealtocosto.org"; // Email desde donde env�o el correo.
+$mail->From = "info@cuentadealtocosto.org"; 
 $mail->FromName = "Cuenta de Alto Costo";
-$mail->AddAddress($destinatario); // Esta es la direcci�n a donde enviamos los datos del formulario
-//$mail->AddAttachment($path); 
-//$mail->AddAddress($destinatario2);
+$mail->AddAddress($destinatario); 
 
-$mail->Subject = "Usuarios SISCAC"; // Este es el titulo del email.
+$mail->Subject = "Usuarios SISCAC"; 
 $mensajeHtml = nl2br($mensaje);
 $mail->Body = "<!DOCTYPE html>
 <html lang='es'>
@@ -194,6 +189,7 @@ $dir_subida = '../files/'.Date('Y')."/".Date('m')."/";
 $hora = Date('his');
 $fecha = Date('Y-m-d h:i:s');
 $query ="SELECT * FROM archivos WHERE IdSolicitud = $id";
+
 	$res =  mysqli_query($conn,$query);
 	while ($fila= mysqli_fetch_array($res)){ 
 		$IdArchivo[]=$fila['IdArchivo'];
@@ -291,7 +287,6 @@ if(!empty($filePDF1)){
 		$update3 = "UPDATE `archivos` SET `Nombre`='$filePDF1',`TipoDoc`='3',`Ruta`='$archivo_subido3',`FechaSubida`='$fecha',`Estado`=' ' WHERE IdArchivo= '$IdArchivo[2]'";  
 		$ejecutar = $conn->prepare($update3);
 		if ($ejecutar->execute()) {
-			// echo "Archivo subido a bd3.";
 			// echo"</br>";
 		}
 	}else{
@@ -342,7 +337,7 @@ else{
 
 	echo "<script>alert('Se ha Actualizado la informacion correctamente')</script>";
 	//session_destroy();
-	echo "<script>window.location.replace('../form.php')</script>";
+	// echo "<script>window.location.replace('../form.php')</script>";
 
 }
 else{

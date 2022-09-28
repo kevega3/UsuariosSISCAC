@@ -44,6 +44,7 @@ font-family: 'Montserrat', sans-serif;" class="container-fluid">
 
     <?php
         $query ="SELECT s.IdSolicitud,s.IdTipoEntidad, t.DescripcionEntidad,s.NIT,s.NumVNIT,s.Nombre,s.RepresentanteLegal,s.Cargo,s.Correo,s.Telefono,s.FechaCreacion,a.IdSolicitud,s.IdEstado,e.Descripcion FROM solicitudes s INNER JOIN tipoentidad t  ON s.IdTipoEntidad = t.IdTipoEntidad INNER JOIN estados e ON e.IdEstado = s.IdEstado INNER JOIN archivos a ON  a.IdSolicitud =  s.IdSolicitud  WHERE s.IdSolicitud ='$buscar' " ;
+
         $res = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_array($res)) {
             $DescripEntidad = $row['DescripcionEntidad']; 

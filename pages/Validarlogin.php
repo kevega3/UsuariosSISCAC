@@ -42,7 +42,7 @@ else{
     }   
         session_start();
         $_SESSION['id'] = $id;
-        $_SESSION['entidad'] ='entidad';
+        $_SESSION['entidad'] ='entidadConToken';
         header("location: GenerarSolicitud.php");
            
 }

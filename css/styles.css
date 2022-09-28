@@ -35,8 +35,9 @@ input[type=submit]:hover {
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: rgb(227, 227, 230); 
 }
+
 
 .col-50 {
   float: left;
@@ -83,14 +84,16 @@ table {
 }
 .btn-Descarga{
   transition: 0.3s;
-  border-radius: 3px;
-  border: 1px solid #706e6e;
-  padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #17309C;
+    padding: 10px;
+    background: #17309C;
+    color: white;
   
 }
 .btn-Descarga:hover{
-  background: #c2c2c2;
-  border: 1px solid black;
+  background: #0a1958;
+  border: 1px solid #0a1958;
 }
 table, tr, td{
   border-style: none;

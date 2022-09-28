@@ -1,6 +1,7 @@
-
+ 
 <?php
         $query2 ="SELECT * FROM archivos WHERE IdSolicitud = '$buscar'" ;
+
         $res2 = mysqli_query($conn, $query2);
         while ($row2 = mysqli_fetch_array($res2)) { 
             // $Ruta[]=$row2['Ruta'];
@@ -30,8 +31,9 @@
                         <tr>
                             <td>Asignación de usuarios</td>
                             <td>
+                                 
                                 <a  target="_blank" href="../../<?php echo $Ruta[0]?>">
-                                    <button class="btn-Descarga">Descargar</button> 
+                                    <button class="btn-Descarga"><i class="fas fa-eye"></i></button> 
                                 </a>
 
                                     
@@ -44,7 +46,7 @@
                             <td>Solicitud de usuarios</td>
                             <td>
                                 <a target="_blank" href="../../<?php echo $Ruta[1]?>">
-                                    <button class="btn-Descarga">Descargar</button>
+                                    <button class="btn-Descarga"><i class="fas fa-eye"></i></button>
                                 </a>
 
                                     
@@ -56,7 +58,7 @@
                             <td>
                                 <div class="contenedorBtonDescarga">
                                     <a target="_blank" href="../../<?php echo $Ruta[2]?>">
-                                        <button class="btn-Descarga">Descargar</button>
+                                        <button class="btn-Descarga"><i class="fas fa-eye"></i></button>
                                     </a> 
                                     
                       
@@ -68,7 +70,7 @@
                             <td>Datos personales <strong>Funcionarios</strong></td>
                             <td>
                                 <a  target="_blank" href="../../<?php echo $Ruta[3]?>">
-                                    <button class="btn-Descarga">Descargar</button>
+                                    <button class="btn-Descarga"><i class="fas fa-eye"></i></button>
                                 </a> 
                             </td>
                         </tr>
