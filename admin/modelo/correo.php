@@ -235,7 +235,8 @@ $mail->Body = "<!DOCTYPE html>
         
         </br>
         <center>
-          <a class='boton' href='https://cuentadealtocosto.org/siscac_users/admin/form.php' target='_blank'>Actualizar Datos</a>
+          <a class='boton' href='http://localhost/UsuariosSISCAC/admin/form.php' target='_blank'>Actualizar Datos</a>
+          
         </center>
       </div>
       <div class='footer'>

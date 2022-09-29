@@ -93,7 +93,7 @@ background-color: rgb(227, 227, 230); ">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">
-                                El Usuario debe tener 5 a 16 dígitos y solo puede contener numeros.
+                                El Token debe tener 5 a 16 dígitos y solo puede contener letras y numeros.
                             </p>
                         </div>
 

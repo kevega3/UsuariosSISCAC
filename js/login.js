@@ -3,7 +3,7 @@ const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
 
 const expresiones = {
-	TokenACC: /^[a-z,A-Z, 0-9 o Ñ ñ]{3,40}$/, // 7 a 14 numeros.
+	TokenACC: /^[a-z,A-Z, 0-9 o Ñ ñ]{5,40}$/, // 7 a 14 numeros.
 };
 
 const campos = {

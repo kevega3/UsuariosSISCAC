@@ -270,7 +270,7 @@ background-color: rgb(227, 227, 230); ">
                         </div>
                         <div class="row">
                             <div class="col-50">
-                                <label for="files">Formato de asignación de usuarios</label><a data-toggle="popover"
+                                <label for="files">Formato de asignación de usuarios (Teniendo en cuenta su tipo de entidad)</label><a data-toggle="popover"
                                     title="Adjunte el formato de asignación de usuarios debidamente diligenciado (Recuerde relacionar en el formato todos los usuarios del sistema que requiere su entidad para la operacion de SISCAC)"
                                     data-content="Some content inside the popover" class="Comentario">?</a>
 
@@ -328,8 +328,9 @@ background-color: rgb(227, 227, 230); ">
                         </div>
                         <div class="row pb-4">
                             <input type="hidden" id="entrar" name="entrar">
+                            <input type="text" id="NombreEni" names="NombreEni"  value="<?php echo $buscar ?>">
                             <button type="submit" class="BtnSubmmit">
-                                Siguiente Paso <i class="button__icon fas fa-arrow-right"></i>
+                                Enviar<i class="button__icon fas fa-arrow-right"></i>
                             </button>
                         </div>
                     </form>

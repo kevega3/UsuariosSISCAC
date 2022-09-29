@@ -2,6 +2,7 @@
 // error_reporting(0);
 include ('key.php');
 //Google
+
 if ($_POST['entrar']) {
 
     $googleToken = $_POST['entrar'];
@@ -12,11 +13,12 @@ if ($_POST['entrar']) {
     $response = (array) $response;
 
     if($response['success'] && ($response['score'] && $response['score'] > 0.5)){ 
-		
+	
 class Datos{
 
 	private $archivo;
 	private $tipoentidad;
+	private $NombreEni;
 	private $nit;
 	private $numV;
 	private $nombre;
@@ -56,7 +58,7 @@ class Datos{
 
 			}else{
 				echo "<script>alert('Error al cargar el archivo ".$this->archivo['name'].". Vuelva a intentarlo.')</script>";
-				echo "<script>window.location.replace('../index.php')</script>";
+				// echo "<script>window.location.replace('../index.php')</script>";
 			}
 		}		
 	}
@@ -102,8 +104,14 @@ class Datos{
 		$telefonoSUC=filter_var($_POST['telefono'], FILTER_SANITIZE_STRING);
 		$this->telefono = preg_replace('/[@\.\;\"\´  ]+/','',$telefonoSUC);
 		// $this->telefono = filter_var($_POST['telefono'], FILTER_SANITIZE_STRING);
-
+		$NombreEniSUC=filter_var($_POST['NombreEni'], FILTER_SANITIZE_STRING);
+		$this->NombreEni = preg_replace('/[@\.\;\"\´  ]+/','',$NombreEniSUC);
+		
 		$fecha = Date('Y-m-d h:i:s');	
+
+		$UpdateToken="UPDATE `token_au` SET `Token`='Used' WHERE  IdToken = '$NombreEni'";
+		echo $NombreEni;
+		$smtm = $conn->prepare($UpdateToken);
 
 		$insertar="INSERT INTO `solicitudes`(`IdTipoEntidad`, `NIT`, `NumVNIT`, `Nombre`, `RepresentanteLegal`, `Cargo`, `Correo`, `Telefono`, `FechaCreacion`, `IdAsignadoA`, `IdEstado`) VALUES ('$this->tipoentidad','$this->nit','$this->numV','$this->nombre','$this->representante','$this->cargo','$this->correo','$this->telefono','$fecha','1','1')";
 		$smtm = $conn->prepare($insertar);
@@ -111,8 +119,12 @@ class Datos{
 		if ($smtm->execute()) {
 			$this->idsolicitud = $conn->lastInsertId();
 			include('correo.php');
+			
+			
+			
+
 			echo "<script>alert('Información registrada con éxito.')</script>";
-			echo "<script>window.location.replace('../index.php')</script>";
+			// echo "<script>window.location.replace('../index.php')</script>";
 		}
 		else{
 			echo "<script>alert('Error al guardar la información. Por favor vuelva a intentarlo')</script>";
@@ -129,7 +141,7 @@ class Datos{
 			if ($_FILES['comunicado']['error'] > 0 || $_FILES['representante']['error'] > 0 || $_FILES['asignacionUsuarios']['error'] > 0 || $_FILES['funcionarios']['error'] > 0) {
 
 				echo "<script>alert('Archivos con errores. Vuelva a intentarlo.')</script>";
-				echo "<script>window.location.replace('../index.php')</script>";
+				// echo "<script>window.location.replace('../index.php')</script>";
 			}else{
 				$permitidos = array("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.ms-excel","application/pdf");
 				$limite_kb = 5000;
@@ -142,7 +154,7 @@ class Datos{
 					}
 				}else{
 					echo "<script>alert('Uno o más archivos presentan errores en la extensión permitida. Vuelva a intentarlo.')</script>";
-					echo "<script>window.location.replace('../index.php')</script>";
+					// echo "<script>window.location.replace('../index.php')</script>";
 				}
 			}
 		}
@@ -154,12 +166,12 @@ $gestionar->validar();
 
 	}else{
 		echo "<script>alert('Vuelve a intentarlo')</script>";
-		echo "<script>window.location.replace('../index.php')</script>";
+		// echo "<script>window.location.replace('../index.php')</script>";
 	}
 
 }else{
 	echo "<script>alert('Vuelve a intentarlo...')</script>";
-	echo "<script>window.location.replace('../index.php')</script>";
+	// echo "<script>window.location.replace('../index.php')</script>";
 }
 
 ?>
