@@ -52,7 +52,7 @@ font-family: 'Montserrat', sans-serif;">
                                 <?php if($TipoUser == 'Juridica'){
                         ?>
 
-                                <a href="juridica.php" class="btn btn1"></a>
+                                <a href="Solicitudes.php" class="btn btn1"></a>
                                 <?php }else{ ?>
 
                                 <a href="creados.php" class="btn btn3"></a>

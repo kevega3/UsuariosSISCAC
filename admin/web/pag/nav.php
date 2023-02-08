@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark menu contenedorLink">
     <div class="container-fluid ">
         <div class="VolverJuridica">
-            <a class="text-white" href="juridica.php"><i class="fas fa-arrow-left"></i></a>
+            <a class="text-white" href="Solicitudes.php"><i class="fas fa-arrow-left"></i></a>
         </div>
 
 
@@ -26,10 +26,10 @@
 
         <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
             <ul class="navbar-nav ul">
-                <?php if( $TipoUser == 'Juridica'){
+                <?php if( $TipoUser == 'CAC' || $TipoUser == 'Admin'){
                     ?>
                 <li class="nav-item navegar">
-                    <a class="" href="juridica.php">Solicitudes</a>
+                    <a class="" href="Solicitudes.php">Solicitudes</a>
                 </li>
 
                 <li class="nav-item navegar">
@@ -40,7 +40,7 @@
                 <li class="nav-item  navegar">
                     <a class="" href="aceptados.php">Aprobados</a>
                 </li>
-                <?php if( $TipoUser == 'CAC'){
+                <?php if( $TipoUser == 'CAC' || $TipoUser == 'Admin'){
                     ?>
                     <li class="nav-item  navegar">
                     <a class="" href="creados.php">Creados</a>
@@ -48,7 +48,17 @@
                 <li class="nav-item  navegar">
                     <a class="" href="Token.php">Token</a>
                 </li>
-                <?php }?>
+                <?php }
+                if($TipoUser == 'Admin'){
+                    ?>
+                    <li class="nav-item  navegar">
+                    <a class="" href="Tiempos.php">Tiempos</a>
+                </li>
+                    <?php
+                }?>
+                    
+                
+                
                 <div class="btn-group dropstart">
                     <button type="button" class="inputRe  dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">

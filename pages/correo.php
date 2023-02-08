@@ -4,7 +4,7 @@ require("mail/class.smtp.php");
 require("../admin/modelo/conn.php");
 
 // error_reporting(0);
-$BuscarCorreo = "SELECT * FROM `usuarios` WHERE TipoUser ='Juridica'";
+$BuscarCorreo = "SELECT * FROM `usuarios` WHERE TipoUser ='CAC'";
 $res= mysqli_query($conn,$BuscarCorreo);
 while ($fila= mysqli_fetch_array($res)) {
     $Correo = $fila['Correo'];   

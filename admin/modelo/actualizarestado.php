@@ -13,21 +13,22 @@ const Editar = window.btoa(buscar);
 const IdUser = window.btoa(id);
 </script>
 <?php
+date_default_timezone_set('America/Bogota');
+$fecha = Date('Y-m-d h:i:s');
+
 if(filter_var($buscar, FILTER_VALIDATE_INT)=== 0 || !filter_var($buscar, FILTER_VALIDATE_INT) === false){
-    $query="UPDATE solicitudes SET IdEstado=2 WHERE IdSolicitud = '$buscar'";
+    $query="UPDATE solicitudes SET IdEstado=2,FechaSISCAC= '$fecha' WHERE IdSolicitud = $buscar";
     $res= mysqli_query($conn,$query);
 
     if(!$res ){
         echo "<script>alert('Error Interno Vuelve a intentarlo mas tarde....')</script>";
+        echo "<script>window.location.replace('../web/pag/Solicitudes.php)</script>";
     }else{
 
 
 $mensaje = "prueba";
 $destinatario = $correo;
-// $destinatario = 'kvega@cuentadealtocosto.org';
 
-//$destinatario2 = "medioscac@cuentadealtocosto.org";
-// Datos de la cuenta de correo utilizada para enviar v�a SMTP
 $smtpHost = "smtp.office365.com";  // Dominio alternativo brindado en el email de alta 
 $smtpUsuario = "info@cuentadealtocosto.org";  // Mi cuenta de correo
 $smtpClave = "jcvxrwvsldpmczhd";  // Mi contrase�a
@@ -192,11 +193,11 @@ $mail->SMTPOptions = array(
 );
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
-  include('correoparacac.php');
-  //echo "<script>window.location.replace('../Web/Pag/Juridica.php?buscar='+ Editar +'&id='+ IdUser)</script>";
+  include('correoparaJuridica.php');
+  //echo "<script>window.location.replace('../Web/Pag/Solicitudes.php?buscar='+ Editar +'&id='+ IdUser)</script>";
 } else {
     echo "<script>alert('Ocurrio un Error inesperado Vuelva a intentarlo ..')</script>"; 
-    echo "<script>window.location.replace('../web/pag/juridica.php?buscar='+ Editar)</script>";
+    // echo "<script>window.location.replace('../web/pag/Solicitudes.php)</script>";
 }
   
      }

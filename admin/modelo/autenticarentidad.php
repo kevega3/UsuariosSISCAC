@@ -26,15 +26,15 @@ if(empty($_SESSION['id']) || empty($_SESSION['entidad'])){
             $IdArchivo[]=$fila2['IdArchivo'];
         }
         
-        for($i=1;$i<=4;$i++){
+        for($i=1;$i<=3;$i++){
         $BuscarArchivo ="SELECT * FROM archivos WHERE IdSolicitud=$buscar AND TipoDoc = $i";
+       
         $res3 = mysqli_query($conn, $BuscarArchivo);
         while ($row2 = mysqli_fetch_array($res3)) { 
             $Nombre[]=$row2['Nombre'];
         }
         
         }
-    
     $inactividad = 600;
     if(isset($_SESSION["timeout"])){
         // Calcular el tiempo de vida de la sesión (TTL = Time To Live)

@@ -8,8 +8,11 @@ var buscar = "<?php echo $buscar;?>";
 const Editar = window.btoa(buscar);
 </script>
 <?php
+date_default_timezone_set('America/Bogota');
+$fecha = Date('Y-m-d h:i:s');
+
 if(filter_var($buscar, FILTER_VALIDATE_INT)=== 0 || !filter_var($buscar, FILTER_VALIDATE_INT) === false){
-    $query="UPDATE solicitudes SET IdEstado=4 WHERE IdSolicitud = '$buscar'";
+    $query="UPDATE solicitudes SET IdEstado=4,FechaSISCAC= '$fecha' WHERE IdSolicitud = '$buscar'";
     $res= mysqli_query($conn,$query);
 
     if(!$res ){

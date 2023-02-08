@@ -4,7 +4,7 @@
         </script>
         <div class="btones-Acciones">
                 <button aria-current="page" class="btnAcciones aceptar" name="<?php echo $buscar?>" id="Aceptar"
-                    onclick="Aceptar();">
+                    onclick="Aceptar()">
                     <span>Aceptar</span>
                 </button>
             

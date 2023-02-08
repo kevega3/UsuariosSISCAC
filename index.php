@@ -35,7 +35,7 @@ label {
 
 <body style="
 font-family: 'Montserrat', sans-serif;
-background-color: rgb(227, 227, 230); ">
+background-color: white; ">
 
 <div class="container-fluid">
     <div class="w3-row ">

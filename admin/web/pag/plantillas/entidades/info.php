@@ -5,5 +5,5 @@
 </div>
 
 <div class="contenedorInfo">
-    <p class="indicaciones"> <span class="import">! Importante ¡ </span> Al momento de Actualizar sus documentos asegurese  de volver a cargar los archivos que estan en el recuadro rojo, así la actualizacion sera exitosa (Si desea actualizar los demas documentos tambien podria hacerlo).</p>
+    <p class="indicaciones"> <span class="import">! Importante ¡ </span> Se debe cargar todos los archivos nuevamente, asegúrese de revisar los archivos que se encuentran con recuadro rojo, estos archivos son los que presentan el error. En la parte derecha inferior puede visualizar los archivos que cargo.</p>
 </div>

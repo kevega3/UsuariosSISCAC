@@ -98,7 +98,7 @@ font-weight: bold;">
                         <div class="formulario__mensaje" id="formulario__mensaje">
                             <p>
                                 <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
-                                rellena el formulario correctamente.
+                                rellena el formulario.
                             </p>
                         </div>
 

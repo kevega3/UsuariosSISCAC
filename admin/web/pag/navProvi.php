@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark menu contenedorLink">
     <!-- <div class="container-fluid"> -->
         <div class="VolverJuridica">
-            <a class="text-white flechaMela" href="juridica.php"><i class="fas fa-arrow-left"></i></a>
+            <a class="text-white flechaMela" href="Solicitudes.php"><i class="fas fa-arrow-left"></i></a>
         </div>
 
 

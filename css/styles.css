@@ -38,10 +38,8 @@ input[type=submit]:hover {
 }
 
 .container {
-  background-color: rgb(227, 227, 230); 
+  background-color: white; 
 }
-
-
 .col-50 {
   float: left;
   width: 48%;

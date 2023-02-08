@@ -8,7 +8,7 @@ function validar() {
   const $miInput = document.querySelector("#files");
 
   if(document.getElementById('files').getAttribute('accept').split(',').indexOf(extension) < 0) {
-    alert('Archivo inválido. No se permite la extensión ' + extension +' solo se permite archivos con extencion xlsx o xls');
+    alert('Archivo inválido. No se permite la extensión ' + extension +' solo se permite archivos con extencion PDF');
     $miInput.value = "";
   }
 }
@@ -133,28 +133,30 @@ function validarTamano(){
         }
       });
     }
+
+    
     function validarTamanoPDF2(){
   // CODIGO PARA LA SUBIDA DE ARCHIVOS
-      const MAXIMO_TAMANIO_BYTES = 5000000; // 1MB = 1 millón de bytes
+      const MAXIMO_TAMANIO_BYTES = 5000000; 
 
-      // Obtener referencia al elemento
+ 
       const $miInput = document.querySelector("#filePDF2");
       const $filenameB = document.querySelector("#file4");
 
       $miInput.addEventListener("change", function () {
-        // si no hay archivos, regresamos
+
         if (this.files.length <= 0) return;
 
-        // Validamos el primer archivo únipcamente
+   
         const archivo = this.files[0];
         if (archivo.size > MAXIMO_TAMANIO_BYTES) {
           const tamanioEnMb = MAXIMO_TAMANIO_BYTES / 1000000;
           alert(`El tamaño máximo es ${tamanioEnMb} MB`);
-          // Limpiar
+  
           $miInput.value = "";
           $filenameB.text = "";
         } else {
-          // Validación pasada. Envía el formulario o haz lo que tengas que hacer
+        
         }
       });
     }
@@ -191,14 +193,14 @@ function validarTamano(){
 
    function FormatoAsig(){
     Swal.fire({
-      title: 'Eligue su tipo de entidad',
+      title: 'Elige su tipo de entidad',
       input: 'select',
       confirmButtonColor: '#17309C',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Descargar',
       inputOptions: {
         '1': 'IPS',
-        '2': 'EPS',
+        '2': 'EAPB',
       },
       inputPlaceholder: 'Requerido',
       showCancelButton: true,
@@ -207,17 +209,17 @@ function validarTamano(){
           if (value !== '') {
             resolve();
           } else {
-            resolve('Necesitamos que elija una opcion ');
+            resolve('Necesitamos que nos de una opcion ');
           }
         });
       }
     }).then(function (result) {
       if (result.isConfirmed) {
         if(result.value == '1'){
-          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx";
+          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2022/09/formato_permisos_roles_gdt-ft-79-ips.xlsx";
           target = "_blank";
         }else if(result.value == '2'){
-          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2019/12/formato_permisos_roles_gdt-ft-79.xlsx";
+          window.location = "https://cuentadealtocosto.org/site/wp-content/uploads/2022/09/formato_permisos_roles_gdt-ft-79-eapb.xlsx";
           target = "_blank";
         }else{
           Swal.fire({

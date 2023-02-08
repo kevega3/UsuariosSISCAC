@@ -39,14 +39,24 @@ while ($row2 = mysqli_fetch_array($res2)) {
 
                     
                     <div class="checkbox">
-                        <h3 class="titulomodal">Archivos Incorrectos</h3>
+                        <h3 class="titulomodal">Archivo Incorrecto</h3>
+                        
+                        <?php if( $TipoUser == 'CAC' || $TipoUser == 'Admin'){
+                        ?>
                         <input type="checkbox" value="<?php echo $IdArchivo[1]; ?>" name="AsgU"> Asignacion Usuarios
                         <br>
+                       <?php }?>
+                        <?php if( $TipoUser == 'Juridica' || $TipoUser == 'Admin'){
+                            ?>
                         <input type="checkbox" value="<?php echo $IdArchivo[3]; ?>" name="SoliU"> Solicitud Usuarios
                         <br>
                         <input type="checkbox" value="<?php echo $IdArchivo[2]; ?>" name="Rel"> Representantes Legales
                         <br>
-                        <input type="checkbox" value="<?php echo $IdArchivo[0]; ?>" name="DaFun"> Datos Funcionarios
+                        <?php
+                        }
+                        ?>
+                        
+                        
                     </div>
                     <div class="modal-footer ">
                         
@@ -72,3 +82,12 @@ while ($row2 = mysqli_fetch_array($res2)) {
     }
     
 </script>
+
+
+
+
+
+
+
+
+

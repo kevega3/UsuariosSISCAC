@@ -149,7 +149,7 @@ $mail->Body = "<!DOCTYPE html>
         
         </br>
         <center>
-          <a class='boton' href='http://localhost/SISCAC_users/' target='_blank'>Generar solicitud</a>
+          <a class='boton' href='http://localhost/UsuariosSISCAC/' target='_blank'>Generar solicitud</a>
         </center>
       </div>
       <div class='footer'>

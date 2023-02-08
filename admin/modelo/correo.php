@@ -11,7 +11,7 @@ $correo= trim($_POST['correo']);
 $AsgU= trim($_POST['AsgU']);
   $SoliU= trim($_POST['SoliU']);
    $Rel= trim($_POST['Rel']);
-   $DaFun= trim($_POST['DaFun']);
+  //  $DaFun= trim($_POST['DaFun']);
    $Fecha = date('Y-m-d', time());
    
 $x=0;
@@ -50,14 +50,14 @@ if(empty($AsgU)){
         $query3 ="UPDATE archivos SET Estado='$Estado' WHERE IdArchivo = '$Rel'";
         $res= mysqli_query($conn,$query3);
 
-        if(empty($DaFun)){
-           $Estado= "Cumple";
-           }
-           elseif(isset($DaFun)){
-           $Estado ="No Cumple";
-           }
-           $query4 ="UPDATE archivos SET Estado='$Estado' WHERE IdArchivo = '$DaFun'";
-           $res= mysqli_query($conn,$query4);
+        // if(empty($DaFun)){
+        //    $Estado= "Cumple";
+        //    }
+        //    elseif(isset($DaFun)){
+        //    $Estado ="No Cumple";
+        //    }
+        //    $query4 ="UPDATE archivos SET Estado='$Estado' WHERE IdArchivo = '$DaFun'";
+        //    $res= mysqli_query($conn,$query4);
         
 
 ?>
@@ -76,7 +76,7 @@ $query4="INSERT INTO comentarios(IdSolicitud, FechaCreacion,Comentario) VALUES (
 $res= mysqli_query($conn,$query4);
 if(!$res ){
   echo "<script>alert('Error interno, vuelve a intentarlo mas tarde ...')</script>";
-  echo "<script>window.location.replace('../web/pag/tablajuridica.php?buscar='+ Editar)</script>";
+  echo "<script>window.location.replace('../web/pag/tablaSolicitudes.php?buscar='+ Editar)</script>";
 }else{
   
 // $Adjunto = filter_var($Adjunto, FILTER_SANITIZE_STRING);
@@ -259,11 +259,11 @@ $mail->SMTPOptions = array(
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
   echo "<script>alert('Se ha Negado la solicitud exitosamente')</script>";
-  echo "<script>window.location.replace('../web/pag/juridica.php')</script>";
+  echo "<script>window.location.replace('../web/pag/Solicitudes.php')</script>";
 
 } else {
     echo "<script>alert('Ocurrio un Error inesperado Vuelva a intentarlo ..')</script>"; 
-    echo "<script>window.location.replace('../web/pag/juridica.php')</script>";
+    echo "<script>window.location.replace('../web/pag/Solicitudes.php')</script>";
 }
 }
 

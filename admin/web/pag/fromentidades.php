@@ -91,29 +91,22 @@ font-family: 'Montserrat', sans-serif;">
 
 
 
-
-
-
-
-
-
-
-
-
     <?php   
-    for($i=0;$i<=3;$i++){
-    
-        if($Estado[$i] == 'No Cumple'){
+    for($j=0;$j<=2;$j++){
+        
+        if($Estado[$j] == 'No Cumple'){
+            
         ?>
     <script>
-    $('.<?php echo "$i"?>').addClass("Incorrecto");
-    $('.text').addClass("IncorrectoText");
+    $('.<?php echo "$j"?>').addClass("Incorrecto");
+    
+    $('.text<?php echo "$j"?>').addClass("IncorrectoText");
     </script>
     <?php  
     }else{
         ?>
     <script>
-    $('.text<?php echo "$i"?>').addClass("IncorrectoF");
+    $('.text<?php echo "$j"?>').addClass("IncorrectoF");
     </script>
     <?php 
     }

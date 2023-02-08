@@ -43,7 +43,7 @@ include ('AutenticarEnti.php');
         margin: 0;
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
-
+        
     }
 
     footer {
@@ -123,7 +123,7 @@ background-color: rgb(227, 227, 230); ">
         <div class="w3-row ">
             <div class="w3-container w3-half">
                 <!--  -->
-                <div class=" container container2">
+                <div class=" container container2" style="background-color: rgb(227, 227, 230)">
                     <div class="Pasos">
                     <h2 class="TituloParaReg">Para generar una solicitud de usuarios SISCAC debe seguir los siguientes pasos:</h4>
                             <h4>Paso 1 descargue Los documentos :</h4>
@@ -148,22 +148,22 @@ background-color: rgb(227, 227, 230); ">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Formato de Tratamiento de datos personales <strong>Representante legal</strong></td>
+                                <td>Formato de Tratamiento de datos personales <strong>Representante legal y funcionarios</strong></td>
                                 <td>
                                     <div class="contenedorBtonDescarga">
                                         <a
-                                            href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/09/gdt_dg_28_autorizacion-para-el-tratamiento-de-datos-personales-en-la-plataforma-siscac-v4.docx"><button
+                                            href="https://cuentadealtocosto.org/site/sgi_dg_28_autorizacion-para-tratamiento-de-datos-personales-funcionarios-siscac-v2-2/"><button
                                                 class="btn-Descarga"><i class="fas fa-download"></i></button></a>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>Formato de Tratamiento de datos personales <strong>Funcionarios</strong></td>
                                 <td><a
                                         href="https://cuentadealtocosto.org/site/sgi_dg_28_autorizacion-para-tratamiento-de-datos-personales-funcionarios-siscac-v2-2/"><button
                                             class="btn-Descarga">  <i class="fas fa-download"></i></button></a>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
 
@@ -193,7 +193,7 @@ background-color: rgb(227, 227, 230); ">
 
             <div class="w3-container w3-half ">
                 <!--  -->
-                <div class="container">
+                <div class="container" style="background-color: rgb(227, 227, 230)">
                     <form action="guardarsolicitud.php" method="POST" enctype="multipart/form-data" id="formulario">
                         <div class="row">
                             <div class="col-50">
@@ -296,9 +296,8 @@ background-color: rgb(227, 227, 230); ">
                         </div>
                         <div class="row">
                             <div class="col-50">
-                                <label for="filePDF1">Formato de Tratamiento de datos personales Representante
-                                    legal</label><a data-toggle="popover"
-                                    title="Adjunte un PDF que incluya el formato de tratamiento de datos personales del representante legal"
+                                <label for="filePDF1">Formato de Tratamiento de datos personales Representante legal y funcionarios</label><a data-toggle="popover"
+                                    title="Adjunte un PDF que incluya el formato de tratamiento de datos personales del representante legal y funcionarios"
                                     data-content="Some content inside the popover" class="Comentario">?</a>
                                 <label class="file">
                                     <input type="file" id="filePDF1" onclick="validarTamanoPDF1()"
@@ -306,7 +305,7 @@ background-color: rgb(227, 227, 230); ">
                                     <span class="file-custom"><a id="file3"></a></span>
                                 </label>
                             </div>
-                            <div class="col-50">
+                            <!-- <div class="col-50">
                                 <label for="filePDF2">Formato de Tratamiento de datos personales Funcionarios</label><a
                                     data-toggle="popover"
                                     title="Adjunte un PDF que incluya el formato de tratamiento de datos personale de todos los usuarios operativos del sistema"
@@ -316,7 +315,7 @@ background-color: rgb(227, 227, 230); ">
                                         onchange="validarPDF2()" accept=".pdf" name="funcionarios" required>
                                     <span class="file-custom"><a id="file4"></a></span>
                                 </label>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row">
                             <p><input type="checkbox" id="politica" name="politica" value="1" required>
@@ -328,7 +327,7 @@ background-color: rgb(227, 227, 230); ">
                         </div>
                         <div class="row pb-4">
                             <input type="hidden" id="entrar" name="entrar">
-                            <input type="text" id="NombreEni" names="NombreEni"  value="<?php echo $buscar ?>">
+                            <input type="hidden" id="NombreEni" name="NombreEni"  value="<?php echo $buscar ?>">
                             <button type="submit" class="BtnSubmmit">
                                 Enviar<i class="button__icon fas fa-arrow-right"></i>
                             </button>

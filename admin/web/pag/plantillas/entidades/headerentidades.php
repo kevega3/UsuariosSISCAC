@@ -10,6 +10,6 @@
 		<p class="bienvenido">¡Bienvenido!</p>
 	</div>
     <div class="titulo2">
-		<p class="bienvenido2">Esta en el portal de Actualización de Archivos de la cuenta de alto costo, Aqui puede actualizar los archivos que nosotros concideramos Incorrectos.</p>
+		<p class="bienvenido2">Está en el portal de Actualización de archivos de la Cuenta de Alto Costo, Aquí puede actualizar los archivos que nosotros consideramos Incorrectos.</p>
 	</div>
 </div>
